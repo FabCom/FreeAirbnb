@@ -1,24 +1,34 @@
-# README
+# FreeAirbnb
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application réalisée dans le cadre de la formation The Hacking project.
 
-Things you may want to cover:
+## Version 1.0
 
-* Ruby version
+Backend de l'application créé, utilisation en mode console
 
-* System dependencies
+* Possibilité de créer des utilisateurs (user)
+* Possibilité de créer des logements (lodging) / user affecté via administrator
+* Possibilité de créer des réservations (reservation) / user affecté via guest
+* Validations fonctionnelles (impossibilité de réserver si le logement est déjà réserver aux dates demandées)
+* Données factices générées par seed/ gem Faker
 
-* Configuration
+## Execution
 
-* Database creation
+```
+bundle install
+rails console
+```
 
-* Database initialization
+* Consultation des données via la gem table_print
 
-* How to run the test suite
+```
+tp User.all
+tp Lodging.all
+tp Reservation.all
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Consultation des logements par ville
 
-* Deployment instructions
-
-* ...
+```
+tp City.all[2].lodgings
+```
